@@ -2,7 +2,7 @@ import CatMessageCard from "./components/CatMessageCard";
 import InputField from "./components/InputField";
 import UserMessageCard from "./components/UserMessageCard";
 import './index.scss';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 function App() {
   const [message, setMessage] = useState("");
   const [messageArray, setMessageArray] = useState([]);

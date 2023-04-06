@@ -2,7 +2,7 @@ import React from 'react';
 import Cat from '../assets/cat.png';
 import meow from '../meow.json';
 import { useState, useEffect } from 'react';
-const CatMessageCard = (props) => {
+const CatMessageCard = () => {
   const imageUrl = "https://cataas.com/cat/gif";
   const [img, setImg] = useState();
   const [meowMessage, setMeowMessage] = useState("");

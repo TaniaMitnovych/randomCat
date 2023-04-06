@@ -14,7 +14,7 @@ const InputField = (props) => {
   return (
     <div className='input-field'>
       <input ref={inputRef} type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
-      <button onClick={() => { props.onButtonClick(message); setMessage("") }}><img src={SendButton} /></button>
+      <button onClick={() => { props.onButtonClick(message); setMessage("") }}><img src={SendButton} alt="Send"/></button>
     </div>
   );
 };
