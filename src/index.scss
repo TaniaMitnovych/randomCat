@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Zanabazar+Square&display=swap');
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.messages {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans Zanabazar Square', sans-serif;
+  font-size: 16px;
+}
+
+.message-card {
+  width: 100%;
+  border-top: 1px gray solid;
+  padding: 20px 40px;
+  display: flex;
+  
+  &__icon {
+    margin-right: 20px;
+
+    &>img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.cat-message-card {
+  background-color:rgba(210,217,219,0.3) ;
+  &__icon>img {
+    background-color: rgba(255, 0, 255, 0.1);
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text{
+    font-size: 16px;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    &>img {
+      width: 50%;
+      object-fit: contain;
+    }
+  }
+}
+
+.user-message-card {
+  &__icon>img {
+    background-color: rgba(0, 255, 255, 0.1);
+  }
+
+  &__text {
+    word-break: break-word;
+  }
+}
+
+@media (max-width:700px) {
+  .cat-message-card__image>img {
+    width: 100%;
+  }
+}
+.input-field{
+  display: flex;
+  width:50%;
+  justify-content: space-between;
+  padding:2%;
+  border-top: 1px gray solid;
+  position:sticky;
+  bottom: 0px;
+  background-color: white;
+  margin-top: auto;
+  & input{
+    width: 99%;
+    font-family: 'Noto Sans Zanabazar Square', sans-serif;
+    outline:none;
+    padding: 5px;
+    font-size: 16px;
+  }
+}
