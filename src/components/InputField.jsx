@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SendButton from '../assets/send.png';
-const InputField = (props) => {
+const InputField = ({onButtonClick}) => {
   const [message, setMessage] = useState("");
   const inputRef = useRef(null);
   useEffect(() => {
     document.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
-        props.onButtonClick(inputRef.current.value);
+        onButtonClick(inputRef.current.value);
         setMessage("");
       }
     })
@@ -14,7 +14,7 @@ const InputField = (props) => {
   return (
     <div className='input-field'>
       <input ref={inputRef} type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
-      <button onClick={() => { props.onButtonClick(message); setMessage("") }}><img src={SendButton} alt="Send"/></button>
+      <button onClick={() => { onButtonClick(message); setMessage("") }}><img src={SendButton} alt="Send"/></button>
     </div>
   );
 };
