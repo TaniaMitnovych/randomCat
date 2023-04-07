@@ -13,7 +13,7 @@ const InputField = ({ onButtonClick }) => {
   }, [onButtonClick]);
   return (
     <div className='input-field'>
-      <input ref={inputRef} type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
+      <input ref={inputRef} type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Meow'/>
       <button onClick={() => { onButtonClick(message); setMessage("") }}><img src={SendButton} alt="Send" /></button>
     </div>
   );

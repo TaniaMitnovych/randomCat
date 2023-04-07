@@ -62,11 +62,6 @@
   }
 }
 
-@media (max-width:700px) {
-  .cat-message-card__image>img {
-    width: 100%;
-  }
-}
 .input-field{
   display: flex;
   width:50%;
@@ -83,5 +78,20 @@
     outline:none;
     padding: 5px;
     font-size: 16px;
+  }
+}
+@media (max-width:700px) {
+  .cat-message-card__image>img {
+    width: 100%;
+  }
+  .input-field{
+    width:95%;
+    padding: 5px;
+    & input{
+      padding: 2px;
+    }
+  }
+  .messages {
+    width: 80%;
   }
 }
